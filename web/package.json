@@ -10,6 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.6",
+    "@coral-xyz/anchor": "^0.29.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.14",
+    "@mui/styled-engine": "^5.15.14",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.91.3",
+    "antd": "^5.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.22.3",

@@ -1,82 +1,85 @@
 import { useState } from "react";
-// import "./index.less";
+import "./index.less";
+import Layout from "../../layout/index";
 import { Link } from "react-router-dom";
+import {
+  AreaChartOutlined,
+  TeamOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import useAddress from '../../hook/useAddress';
+import { formatAddress } from '../../utils';
+
 
 function Index() {
+
+  const address = useAddress();
+
   return (
-    <div className="home-page">
-      {/* <!--设置遮罩层--> */}
-      <div id="hideBg"></div>
-      <div className="fixedTop"></div>
-      <header className="clearFloat gradient">
-        <div className="top" id="header">
-          <span className="title">脑力风暴一测试赛季</span>
-          {/* <span className="mark">
-            <a href="#" className="goIndexPage">
-              <i className="other"></i>
-              <i className="other otherL"></i>
-              <i className="other"></i>
-            </a>
-            <span className="splitLine"></span>
-            <i className="close">
-              <i className="other otherL"></i>
-            </i>
-          </span> */}
-        </div>
-      </header>
-      <main>
-        <div className="content">
-          <section className="infoPanel">
-            {/* <span
-              className="share"
-            >
-              <img src="/img/shareEWM.png" />
-            </span> */}
-            <div className="infoImg">
-              <a>
-                <span className="uimg">
-                  <img src="/img/uimg.jpg" alt="头像" />
-                </span>
-                <span className="uname">思思</span>
-              </a>
-            </div>
-            <div className="infoLevel">
-              <span className="level">
-                Lv.2
-                <span className="levelProgress">
-                  <i style={{ width: "0.2rem" }}></i>
-                </span>
-              </span>
-              <span className="score">
-                <span className="scoreMark">
-                  <img src="/img/score.png" />
-                </span>
-                <span className="sNum">1000</span>
-              </span>
-            </div>
-          </section>
-          <section className="gamePanel">
-            <Link to={'../qualify'} className="leftPanel">
-              <div className="orderPanel animationLeft">排位赛1</div>
-            </Link>
-            <Link to={'../fight'} className="rightPanel">
-              <div className="listPanel animationRight">好友对战</div>
-            </Link>
-            <a  className="leftPanel">
-              <div className="storePanle animationLeft">设置</div>
-            </a>
-            <Link to={'../rank'} className="rightPanel">
-              <div
-                className="friendPKPanel animationRight"
-                style={{ marginTop: "-0.5rem" }}
-              >
-                排行榜
+    <Layout title="脑力风暴" headerClass="gradient" showBack={false}>
+      <div className="home-page">
+        <main>
+          <div className="content">
+            <section className="infoPanel">
+              <div className="info-img">
+                <div className="info-wrap">
+                  <span className="uimg">
+                    {/* <img src="/img/uimg.jpg" alt="头像" /> */}
+                    <UserOutlined style={{ fontSize: "0.25rem" }} />
+                  </span>
+                  <span className="address">{
+                    address ? formatAddress(address): '--'
+                  }</span>
+                </div>
               </div>
-            </Link>
-          </section>
-        </div>
-      </main>
-    </div>
+              <div className="info">
+                <span className="item">
+                  <span className="name">余额:</span>
+                  <span className="value">{ address ? '2 SOL':'--'}</span>
+                </span>
+                <span className="item">
+                  <span className="name">胜利:</span>
+                  <span className="value">{ address ? '10':'--'}</span>
+                </span>
+                <span className="item">
+                  <span className="name">失败:</span>
+                  <span className="value">{ address ? '5':'--'}</span>
+                </span>
+              </div>
+            </section>
+            <section className="gamePanel list">
+              <Link to={"../pk"} className="panel">
+                <div
+                  className="panel-content  animationLeft"
+                  style={{ background: "#1885ed", borderColor: "#1885ed" }}
+                >
+                  <span>好友对战</span>
+                  <TeamOutlined style={{ fontSize: "0.4rem" }} />
+                </div>
+              </Link>
+              <Link to={"../rank"} className="panel">
+                <div
+                  className="panel-content animationRight"
+                  style={{ background: "#ef6f9a", borderColor: "#ef6f9a" }}
+                >
+                  <span>排行榜</span>
+                  <AreaChartOutlined style={{ fontSize: "0.4rem" }} />
+                </div>
+              </Link>
+
+              {/* <Link to={"../rank"} className="panel">
+                <div
+                  className="panel-content animationRight"
+                  style={{ background: "#07a4d6", borderColor: "#07a4d6" }}
+                >
+                  排位赛
+                </div>
+              </Link> */}
+            </section>
+          </div>
+        </main>
+      </div>
+    </Layout>
   );
 }
 

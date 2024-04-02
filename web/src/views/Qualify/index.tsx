@@ -1,20 +1,14 @@
 import { useState } from "react";
+import Layout from "../../layout/index";
+
+
 
 function Qualify() {
 
   return (
-    <div id="qualify-page">
-        <div className="fixedTop" id="header"></div>
-        <header className="clearFloat bgcolor">
-            <div className="top ">
-                <span onClick={() => { history.back() }}  className="goBack"></span>
-                <span className="title">排位赛</span>
-                {/* <span className="mark">
-                    <a href="../View/Index.html" className="goIndexPage"><i className="other"></i><i className="other otherL"></i><i className="other"></i></a>
-                    <span className="splitLine"></span><i className="close"><i className="other otherL"></i></i>
-                </span> */}
-            </div>
-        </header>
+    <Layout title="排位赛">
+<div id="qualify-page">
+       
         <main>
             <div className="orderTop animationFadeInDown"></div>
             <section className="orderContainer animationFadeInDown">
@@ -87,6 +81,8 @@ function Qualify() {
             </div>
         </main>
     </div>
+    </Layout>
+    
   );
 }
 

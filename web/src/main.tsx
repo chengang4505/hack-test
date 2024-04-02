@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+import  '@solana/wallet-adapter-react-ui/styles.css';
+
 import "./index.css";
 import "./common.css";
 import "./animation.css";
@@ -13,8 +16,11 @@ import {
 // view
 import Index from "./views/Index/index";
 import Qualify from "./views/Qualify/index";
-import Fight from "./views/Fight/index";
+import PK from "./views/PK/index";
 import Rank from "./views/Rank/index";
+import { Test }  from "./views/Test/index";
+
+import { SOLProvider }  from "./components/Context";
 
 const router = createHashRouter([
   {
@@ -26,17 +32,23 @@ const router = createHashRouter([
     element: <Qualify />,
   },
   {
-    path: "/fight",
-    element: <Fight />,
+    path: "/pk",
+    element: <PK />,
   },
   {
     path: "/rank",
     element: <Rank />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById("container")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <SOLProvider>
+      <RouterProvider router={router} />
+    </SOLProvider>
   </React.StrictMode>
 );

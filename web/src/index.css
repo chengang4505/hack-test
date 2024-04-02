@@ -1,18 +1,12 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  font-size: 100px;
-
-  color: white;
-  background-color: #242424;
-
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.wallet-adapter-modal{
+  z-index: 100000;
 }
 
-body{
-  font-size: 0.14rem;
-} */
+.wallet-adapter-modal-container{
+  margin: 1rem auto 0px auto;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #263e67;
+}
