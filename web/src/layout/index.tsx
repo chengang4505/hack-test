@@ -7,8 +7,9 @@ const Layout: FC<{
   children: ReactNode;
   title: string;
   headerClass?: string;
+  contentClass?: string;
   showBack?:boolean
-}> = ({ children, title, headerClass,showBack = true }) => {
+}> = ({ children, title, headerClass,showBack = true,contentClass }) => {
   return (
     <div className="layout-wrap">
       <div className={`layout-wrap-header ${headerClass || ""}`}>
@@ -23,7 +24,7 @@ const Layout: FC<{
           <WalletButton />
         </div>
       </div>
-      <div className="layout-wrap-content">{children}</div>
+      <div className={`layout-wrap-content ${contentClass || ''}`}>{children}</div>
     </div>
   );
 };

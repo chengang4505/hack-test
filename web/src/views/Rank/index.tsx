@@ -7,17 +7,17 @@ import { formatAddress } from "../../utils";
 const list = [
   {
     address: "7rhxnLV8C77o6d8oz26AgK8x8m5ePsdeRawjqvojbjnQ",
-    winN: 10,
+    winN: 30,
     failN: 5,
   },
   {
     address: "HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe",
-    winN: 3,
+    winN: 25,
     failN: 5,
   },
   {
     address: "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
-    winN: 10,
+    winN: 18,
     failN: 4,
   },
   {
@@ -28,20 +28,18 @@ const list = [
 ];
 
 function Rank() {
-  let address = "dadfs";
   return (
-    <Layout title="排行榜">
+    <Layout title="Rank">
       <div className="rank-page">
         <main>
-          <section className="listContainer" id="listContainer">
+          {/* <section className="listContainer" id="listContainer">
             <div className="title animationZoomIn" id="title"></div>
-          </section>
+          </section> */}
           <div style={{ width: "100%" }}>
             <div className="listLine listGradient"></div>
           </div>
           <div
             className="content"
-            style={{ overflow: "hidden", height: "3.8rem" }}
             id="ListContent"
           >
             <section className="listDiv" id="competList">
@@ -66,11 +64,11 @@ function Rank() {
                       <div className="line"></div>
                       <div className="info">
                         <span className="item">
-                          <span className="name">胜利:</span>
+                          <span className="name">Win:</span>
                           <span className="value">{e.winN || 0}</span>
                         </span>
                         <span className="item">
-                          <span className="name">失败:</span>
+                          <span className="name">Fail:</span>
                           <span className="value">{e.failN || 0}</span>
                         </span>
                       </div>

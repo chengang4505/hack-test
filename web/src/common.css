@@ -10,16 +10,6 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-  background-color: #0368b1;
-  font-size: 14px;
-  font-size: 0.14rem;
-  color: #fff;
-  overflow-x: hidden;
-}
-
 input,
 textarea,
 botton {
@@ -75,7 +65,6 @@ a {
 }
 
 #container main {
-  background-color: #a0d9f6;
   position: relative;
 }
 
@@ -150,7 +139,6 @@ a {
 #container .competContainer span,
 #container .competIntroDiv .levelIntro span,
 #container main.pkPage #startInfo span,
-#container main.pkPage #PKInfo span,
 #timer,
 #timer .circleProgress_wrapper,
 #leftScore div,
@@ -1293,12 +1281,8 @@ a {
   margin-top: -0.05rem;
   position: fixed;
   z-index: 3;
-  left: 5%;
-  border-radius: 0.3rem;
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
+  /* left: 5%; */
+  /* border-radius: 0.3rem; */
 }
 
 #container .listGradient,
@@ -1311,9 +1295,8 @@ a {
   position: relative;
   text-align: center;
   width: 100%;
-  height: 95%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* height: 95%; */
+  overflow: hidden;
   padding-right: 0.3rem;
 }
 
@@ -2841,18 +2824,6 @@ a {
   height: 1.5rem;
 }
 
-#container main.examPage .qContent .answerBg,
-#PKQuestion .answer .answerBg {
-  border: none;
-  outline: none;
-  margin: 0.02rem auto;
-  border-radius: 0.1rem;
-  -webkit-border-radius: 0.1rem;
-  -moz-border-radius: 0.1rem;
-  -o-border-radius: 0.1rem;
-  -ms-border-radius: 0.1rem;
-}
-
 #container main.examPage .qContent .answer {
   text-align: center;
 }
@@ -2862,17 +2833,6 @@ a {
   margin-top: 0.05rem;
 }
 
-#container main.examPage .qContent .answer .answerBg,
-#PKQuestion .answer .answerBg {
-  width: 60%;
-  height: 0.4rem;
-  line-height: 0.4rem;
-  color: rgb(72, 110, 197);
-  text-align: center;
-  background-color: #fff;
-  padding: 0.05rem;
-  font-size: 0.16rem;
-}
 
 #container main.examPage .qContent .answer span.trueA,
 #PKQuestion .answer span.trueA {
@@ -3532,25 +3492,11 @@ a {
 }
 
 #container .competGradient {
-  background: -moz-linear-gradient(bottom, rgba(3, 104, 177, 1) 0%, rgba(3, 104, 177, 0.7) 40%, rgba(3, 104, 177, 0.4) 80%, rgba(3, 104, 177, 0) 100%);
-  /* FF3.6+ #0368b1*/
-  background: -webkit-gradient(linear, bottom, top, color-stop(0%, rgba(3, 104, 177, 1)), color-stop(40%, rgba(3, 104, 177, 0.7)), color-stop(80%, rgba(3, 104, 177, 0.4)), color-stop(100%, rgba(3, 104, 177, 0)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(bottom, rgba(3, 104, 177, 1) 0%, rgba(3, 104, 177, 0.7) 40%, rgba(3, 104, 177, 0.4) 80%, rgba(3, 104, 177, 0) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(bottom, rgba(3, 104, 177, 1) 0%, rgba(3, 104, 177, 0.7) 40%, rgba(3, 104, 177, 0.4) 80%, rgba(3, 104, 177, 0) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(bottom, rgba(3, 104, 177, 1) 0%, rgba(3, 104, 177, 0.7) 40%, rgba(3, 104, 177, 0.4) 80%, rgba(3, 104, 177, 0) 100%);
-  /* IE10+ */
   background: linear-gradient(bottom, rgba(3, 104, 177, 1) 0%, rgba(3, 104, 177, 0.7) 40%, rgba(3, 104, 177, 0.4) 80%, rgba(3, 104, 177, 0) 100%);
   /* W3C */
 }
 
 /*=========排位赛中双方对战=========*/
-#container main.pkPage {
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: 0.5rem;
-}
 
 #container .loading {
   position: absolute;
@@ -3564,28 +3510,10 @@ a {
 
 #container main.pkPage .userAInfo {
   display: inline-block;
-  *dispaly: inline;
-  *zoom: 1;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.1rem;
   border-bottom-left-radius: 0.1rem;
-  -webkit-border-top-left-radius: 0.1rem;
-  -webkit-border-bottom-left-radius: 0.1rem;
-  -webkit-border-top-right-radius: 0.5rem;
-  -webkit-border-bottom-right-radius: 0.5rem;
-  -moz-border-top-left-radius: 0.1rem;
-  -moz-border-bottom-left-radius: 0.1rem;
-  -moz-border-top-right-radius: 0.5rem;
-  -moz-border-bottom-right-radius: 0.5rem;
-  -o-border-top-left-radius: 0.1rem;
-  -o-border-bottom-left-left: 0.1rem;
-  -o-border-top-right-radius: 0.5rem;
-  -o-border-bottom-right-radius: 0.5rem;
-  -ms-border-top-left-radius: 0.1rem;
-  -ms-border-bottom-left-radius: 0.1rem;
-  -ms-border-top-right-radius: 0.5rem;
-  -ms-border-bottom-right-radius: 0.5rem;
   height: 0.65rem;
   width: 100%;
   padding: 0.05rem 0rem;
@@ -3597,28 +3525,10 @@ a {
 
 #container main.pkPage .userBInfo {
   display: inline-block;
-  *dispaly: inline;
-  *zoom: 1;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   border-top-right-radius: 0.1rem;
   border-bottom-right-radius: 0.1rem;
-  -webkit-border-top-right-radius: 0.1rem;
-  -webkit-border-bottom-right-radius: 0.1rem;
-  -webkit-border-top-left-radius: 0.5rem;
-  -webkit-border-bottom-left-radius: 0.5rem;
-  -moz-border-top-right-radius: 0.1rem;
-  -moz-border-bottom-right-radius: 0.1rem;
-  -moz-border-top-left-radius: 0.5rem;
-  -moz-border-bottom-left-radius: 0.5rem;
-  -o-border-top-right-radius: 0.1rem;
-  -o-border-bottom-right-left: 0.1rem;
-  -o-border-top-left-radius: 0.5rem;
-  -o-border-bottom-left-radius: 0.5rem;
-  -ms-border-top-right-radius: 0.1rem;
-  -ms-border-bottom-right-radius: 0.1rem;
-  -ms-border-top-left-radius: 0.5rem;
-  -ms-border-bottom-left-radius: 0.5rem;
   height: 0.65rem;
   width: 100%;
   padding: 0.05rem 0rem;
@@ -3645,10 +3555,6 @@ a {
   border: 0.03rem solid #fff;
   margin: 0rem 0.05rem;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
   width: 0.6rem;
   height: 0.6rem;
 }
@@ -3673,9 +3579,6 @@ a {
   right: -0.1rem;
 }
 
-#PKInfo {
-  /* display: none; */
-}
 
 #PKInfo .timer {
   font-size: 0.3rem;
@@ -3789,13 +3692,8 @@ a {
   line-height: 0rem;
   border: 0.01rem solid #0a4d7d;
   height: 2.3rem;
-  width: 0.12rem;
-  margin-left: 0.05rem;
+  width: 0.04rem;
   border-radius: 0.3rem;
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
 }
 
 #container main.pkPage #PKInfo span.lscore,
@@ -3811,11 +3709,11 @@ a {
 
 #leftScore .scoreBar i,
 #rightScore .scoreBar i {
-  background-color: #eb5344;
+  background-color: #03A9F4;
   margin-left: 0rem;
   border: 0rem;
   position: absolute;
-  bottom: 0.05rem;
+  bottom: 0.01rem;
 }
 
 #container main.pkPage #PKQuestion span.falseMark {
@@ -3826,10 +3724,6 @@ a {
   margin-top: 0.17rem;
 }
 
-#leftScore .scoreBar i,
-#rightScore .scoreBar i {
-  height: 0rem;
-}
 
 #ScoreResult {
   text-align: center;

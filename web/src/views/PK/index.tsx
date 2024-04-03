@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef, memo } from "react";
 import Layout from "../../layout/index";
 import "./index.less";
+import { UserOutlined } from '@ant-design/icons'
+import { formatAddress } from '../../utils'
+import useAddress from '../../hook/useAddress'
+import { Flex, Progress } from 'antd';
 
 let questionList = [
   {
@@ -42,6 +46,7 @@ let questionList = [
 ];
 
 function PK() {
+  const address = useAddress()
   const [, setUpdate] = useState({});
   const count = useRef(10);
   const qIndex = useRef(0);
@@ -54,7 +59,8 @@ function PK() {
   let currentQ = questionList[qIndex.current];
 
   useEffect(() => {
-    startTimer();
+    // setTimeout(startTimer, 2000)
+    startTimer()
     return () => {
       clearInterval(timer.current);
     };
@@ -103,36 +109,35 @@ function PK() {
   }
 
   let isWin = answerLCount.current > answerRCount.current;
+  let leftAddress = formatAddress(address)
+  let rightAddress = formatAddress('HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe')
+  let answerLCountPer = answerLCount.current/questionList.length
+  let answerRCountPer = answerRCount.current/questionList.length
 
   return (
-    <Layout title="对战">
+    <Layout title="PK" contentClass="pk-content">
       <div className="pk-page pkPage">
-        {/* <header className="bgcolor">
-        <div className="top ">
-          <a onClick={() => history.back()}>
-            <span className="goBack"></span>
-          </a>
-          <span className="title">对战</span>
-          <WalletButton></WalletButton>
-        </div>
-      </header> */}
         <main className="pkPage">
           <div id="PKInfo">
             <div className="userAInfo userAColor userL animationLeft">
               <span className="pkUserImg">
-                <img src="/img/uimg.jpg" />
+                <UserOutlined style={{ fontSize: "0.35rem" }} />
               </span>
               <span className="userName" style={{ marginRight: "0.3rem" }}>
-                思思
+                {leftAddress}
               </span>
             </div>
-            {!endFlag.current && <div className="timer">{count.current}</div>}
+            {/* timter */}
+            {!endFlag.current && <div className="timer">
+              {/* <Progress type="circle" percent={10} format={() => `${count.current}s`} /> */}
+              <Progress type="circle" percent={(10-count.current)/10*100} format={() => `${count.current}s`} />
+              </div>}
             <div className="userBInfo userBColor userR animationRight">
               <span className="pkUserImg">
-                <img src="/img/u1.jpg" />
+                <UserOutlined style={{ fontSize: "0.35rem" }} />
               </span>
               <span className="userName" style={{ marginLeft: "0.3rem" }}>
-                周易
+                {rightAddress}
               </span>
             </div>
             {/* left */}
@@ -142,7 +147,7 @@ function PK() {
                   {answerLCount.current}
                 </span>
                 <div className="scoreBar blueShadow">
-                  <i id="lscoreBar"></i>
+                  <i id="lscoreBar" style={{height:  `${answerLCountPer * 2.3}rem`}}></i>
                 </div>
               </div>
             )}
@@ -154,7 +159,7 @@ function PK() {
                   {answerRCount.current}
                 </span>
                 <div className="scoreBar blueShadow">
-                  <i id="rscoreBar"></i>
+                  <i id="rscoreBar" style={{height:  `${answerRCountPer * 2.3}rem`}}></i>
                 </div>
               </div>
             )}
@@ -170,7 +175,7 @@ function PK() {
                   <div className="answer">
                     {currentQ.options.map((e, index) => {
                       return (
-                        <div className="aDiv">
+                        <div className="aDiv" key={e}>
                           <span
                             className="answerBg"
                             onClick={() => onClick(index)}
@@ -185,14 +190,14 @@ function PK() {
               </div>
             )}
             {endFlag.current && (
-              <div id="PKResult">
+              <div id="PKResult" style={{height:'3rem'}}>
                 <div className="userAInfo userAColor userL">
-                  <span className="userName">思思</span>
-                  <span id="rsLscore">{answerLCount.current}分</span>
+                  <span className="userName">{ leftAddress }</span>
+                  <span id="rsLscore">Score {answerLCount.current}</span>
                 </div>
                 <div className="userBInfo userBColor userR">
-                  <span className="userName">周易</span>
-                  <span id="rsRscore">{answerRCount.current}分</span>
+                  <span className="userName">{rightAddress}</span>
+                  <span id="rsRscore">Score {answerRCount.current}</span>
                 </div>
                 <div id="ScoreResult">
                   {isWin && (
@@ -200,7 +205,7 @@ function PK() {
                       <div className="success">
                         <img src="/img/PKSuccess.png" />
                       </div>
-                      <div className="resultText">挑战成功！</div>
+                      <div className="resultText">Success</div>
                     </div>
                   )}
                   {isWin && (
@@ -213,7 +218,7 @@ function PK() {
                       <div className="fail">
                         <img src="/img/PKFail.png" />
                       </div>
-                      <div className="resultText">挑战失败！</div>
+                      <div className="resultText">Fail</div>
                     </div>
                   )}
                 </div>
