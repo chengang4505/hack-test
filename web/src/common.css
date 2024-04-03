@@ -2819,9 +2819,8 @@ a {
   width: 90%;
   margin: 0rem auto;
   padding: 0.1rem;
-  font-size: 0.16rem;
+  font-size: 0.1rem;
   line-height: 0.25rem;
-  height: 1.5rem;
 }
 
 #container main.examPage .qContent .answer {
@@ -3514,7 +3513,7 @@ a {
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.1rem;
   border-bottom-left-radius: 0.1rem;
-  height: 0.65rem;
+  height: 0.3rem;
   width: 100%;
   padding: 0.05rem 0rem;
   text-align: right;
@@ -3529,7 +3528,7 @@ a {
   border-bottom-left-radius: 0.5rem;
   border-top-right-radius: 0.1rem;
   border-bottom-right-radius: 0.1rem;
-  height: 0.65rem;
+  height: 0.3rem;
   width: 100%;
   padding: 0.05rem 0rem;
   text-align: left;
@@ -3552,11 +3551,11 @@ a {
 
 /*rgb(129, 164, 245);*/
 #container main.pkPage .pkUserImg {
-  border: 0.03rem solid #fff;
+  border: 0.015rem solid #fff;
   margin: 0rem 0.05rem;
   border-radius: 50%;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.25rem;
+  height: 0.25rem;
 }
 
 #container main.pkPage span.userName {
@@ -3580,18 +3579,11 @@ a {
 }
 
 
-#PKInfo .timer {
-  font-size: 0.3rem;
-  text-align: center;
-  color: #eb5344;
-  line-height: 0.6rem;
-}
-
 #container main.pkPage #PKInfo span.userName {
   font-size: 0.12rem;
   line-height: 0.2rem;
   display: block;
-  margin-top: 0.01rem
+  margin-top: 0.04rem
 }
 
 #timer {
@@ -3665,9 +3657,6 @@ a {
   line-height: 0.3rem;
 }
 
-#PKQuestion .question {
-  height: 1rem;
-}
 
 #leftScore,
 #rightScore {
@@ -3691,7 +3680,7 @@ a {
   background-color: #0a4d7d;
   line-height: 0rem;
   border: 0.01rem solid #0a4d7d;
-  height: 2.3rem;
+  height: 1.6rem;
   width: 0.04rem;
   border-radius: 0.3rem;
 }
@@ -3735,8 +3724,8 @@ a {
 
 #PKResult .success,
 #PKResult .fail {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 0.6rem;
+  height: 0.6rem;
   margin: 0rem auto;
   margin-top: -0.4rem;
   border: 0.05rem solid #fff;
@@ -3752,11 +3741,11 @@ a {
 #container main.pkPage #PKResult .userL,
 #container main.pkPage #PKResult .userR {
   width: 55%;
-  height: 0.9rem;
-  top: 0.75rem;
+  height: 0.5rem;
+  top: 0.35rem;
   position: absolute;
   display: block;
-  font-size: 0.3rem;
+  font-size: 0.2rem;
   text-align: center;
 }
 
@@ -3778,7 +3767,7 @@ a {
 
 #container main.pkPage #PKResult .winPro {
   position: absolute;
-  top: 1.4rem;
+  top: 1rem;
   width: 100%;
   text-align: center;
 }

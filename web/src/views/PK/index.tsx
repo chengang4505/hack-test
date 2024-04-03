@@ -59,7 +59,6 @@ function PK() {
   let currentQ = questionList[qIndex.current];
 
   useEffect(() => {
-    // setTimeout(startTimer, 2000)
     startTimer()
     return () => {
       clearInterval(timer.current);
@@ -121,7 +120,7 @@ function PK() {
           <div id="PKInfo">
             <div className="userAInfo userAColor userL animationLeft">
               <span className="pkUserImg">
-                <UserOutlined style={{ fontSize: "0.35rem" }} />
+                <UserOutlined style={{ fontSize: "0.2rem" }} />
               </span>
               <span className="userName" style={{ marginRight: "0.3rem" }}>
                 {leftAddress}
@@ -130,11 +129,11 @@ function PK() {
             {/* timter */}
             {!endFlag.current && <div className="timer">
               {/* <Progress type="circle" percent={10} format={() => `${count.current}s`} /> */}
-              <Progress type="circle" percent={(10-count.current)/10*100} format={() => `${count.current}s`} />
+              <Progress size="small" type="circle" percent={(10-count.current)/10*100} format={() => `${count.current}s`} />
               </div>}
             <div className="userBInfo userBColor userR animationRight">
               <span className="pkUserImg">
-                <UserOutlined style={{ fontSize: "0.35rem" }} />
+                <UserOutlined style={{ fontSize: "0.2rem" }} />
               </span>
               <span className="userName" style={{ marginLeft: "0.3rem" }}>
                 {rightAddress}
@@ -147,7 +146,7 @@ function PK() {
                   {answerLCount.current}
                 </span>
                 <div className="scoreBar blueShadow">
-                  <i id="lscoreBar" style={{height:  `${answerLCountPer * 2.3}rem`}}></i>
+                  <i id="lscoreBar" style={{height:  `${answerLCountPer * 1.6}rem`}}></i>
                 </div>
               </div>
             )}
@@ -159,7 +158,7 @@ function PK() {
                   {answerRCount.current}
                 </span>
                 <div className="scoreBar blueShadow">
-                  <i id="rscoreBar" style={{height:  `${answerRCountPer * 2.3}rem`}}></i>
+                  <i id="rscoreBar" style={{height:  `${answerRCountPer * 1.6}rem`}}></i>
                 </div>
               </div>
             )}
@@ -190,7 +189,7 @@ function PK() {
               </div>
             )}
             {endFlag.current && (
-              <div id="PKResult" style={{height:'3rem'}}>
+              <div id="PKResult" style={{height:'2.7rem'}}>
                 <div className="userAInfo userAColor userL">
                   <span className="userName">{ leftAddress }</span>
                   <span id="rsLscore">Score {answerLCount.current}</span>
