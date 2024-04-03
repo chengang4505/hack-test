@@ -6,7 +6,7 @@ import Layout from "../../layout/index";
 function Qualify() {
 
   return (
-    <Layout title="排位赛">
+    <Layout title="">
 <div id="qualify-page">
        
         <main>
@@ -14,7 +14,7 @@ function Qualify() {
             <section className="orderContainer animationFadeInDown">
                 <div className="title">
                     <span className="help">?</span>
-                    <span className="mark">s.1</span><span className="strong">测试</span>赛季
+                    <span className="mark">s.1</span><span className="strong"></span>
                 </div>
                 <div className="infoLevel">
                     <span className="level">Lv.2<span className="levelProgress"><i style={{width:'0.2rem'}}></i></span></span>
@@ -29,7 +29,7 @@ function Qualify() {
                             <div className="orderBg firstGradient">
                                 <div className="levelImg"><img src="/img/f.png" /></div>
                             </div>
-                            <label>一级</label>
+                            <label></label>
                             <span className="underLine"></span>
                             <span className="levelScore"><span className="scoreMark"><img src="/img/score.png" /></span><span className="sNum">20</span></span>
                             <div id="starMark" className="clearFloat">
@@ -42,7 +42,7 @@ function Qualify() {
                             <div className="orderBg firstGradient">
                                 <div className="levelImg"><img src="/img/s.png" /></div>
                             </div>
-                            <label>二级</label>
+                            <label></label>
                             <span className="underLine"></span>
                             <span className="levelScore"><span className="scoreMark"><img src="/img/score.png" /></span><span className="sNum">50</span></span>
                             <div id="starMark" className="clearFloat">
@@ -56,7 +56,7 @@ function Qualify() {
                             <div className="orderBg firstGradient">
                                 <div className="levelImg"><img src="/img/t.png" /></div>
                             </div>
-                            <label>三级</label>
+                            <label></label>
                             <span className="underLine"></span>
                             <span className="levelScore"><span className="scoreMark"><img src="/img/score.png" /></span><span className="sNum">70</span></span>
                             <div id="starMark" className="clearFloat">

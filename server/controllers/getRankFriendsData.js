@@ -3,7 +3,7 @@ module.exports = async (ctx, next) => {
     const query = ctx.query
     const { mysql } = require('../qcloud')
     let res0 = await mysql('friendsnetwork').where({ fromOpenId: ctx.query.openId }).select('cSessionInfo.user_info', 'cSessionInfo.score').leftJoin('cSessionInfo', 'friendsnetwork.openId', 'cSessionInfo.open_id')
-    let res1 = await mysql('friendsnetwork').where({ openId: ctx.query.openId }).select('cSessionInfo.user_info', 'cSessionInfo.score').leftJoin('cSessionInfo', 'friendsnetwork.fromOpenId', 'cSessionInfo.open_id') //注意：friendsnetwork.fromOpenId为undefined的情况
+    let res1 = await mysql('friendsnetwork').where({ openId: ctx.query.openId }).select('cSessionInfo.user_info', 'cSessionInfo.score').leftJoin('cSessionInfo', 'friendsnetwork.fromOpenId', 'cSessionInfo.open_id') //：friendsnetwork.
     let res_me = await mysql('cSessionInfo').where({ open_id: ctx.query.openId }).select('user_info','score')
     let res2 = res0.concat(res1.concat(res_me))
     let arr = []
@@ -12,7 +12,7 @@ module.exports = async (ctx, next) => {
       value.score = val.score
       arr[i] = value
     })
-    function hashRemoveRepeat(arr) {  //去重函数
+    function hashRemoveRepeat(arr) {  //
       var hash = {},
         len = arr.length,
         result = [];

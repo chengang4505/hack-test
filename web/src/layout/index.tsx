@@ -19,7 +19,7 @@ const Layout: FC<{
             onClick={() => history.back()}
           />
         </div>}
-        <span className="title">{title || "对战"}</span>
+        <span className="title">{title || "PK"}</span>
         <div className="wallet-wrap">
           <WalletButton />
         </div>

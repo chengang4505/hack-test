@@ -24,7 +24,6 @@ function Index() {
               <div className="info-img">
                 <div className="info-wrap">
                   <span className="uimg">
-                    {/* <img src="/img/uimg.jpg" alt="头像" /> */}
                     <UserOutlined style={{ fontSize: "0.25rem" }} />
                   </span>
                   <span className="address">{
@@ -72,7 +71,6 @@ function Index() {
                   className="panel-content animationRight"
                   style={{ background: "#07a4d6", borderColor: "#07a4d6" }}
                 >
-                  排位赛
                 </div>
               </Link> */}
             </section>
